@@ -49,7 +49,7 @@ window.addEventListener('load', () => {
                 this.#shapeQueue = Object.values(Shape.shapes);
             }
             const newShape = new Shape(
-                this.#shapeQueue.splice(Math.floor(this.#shapeQueue.length * Math.random()), 1),// random tetris shape
+                this.#shapeQueue.splice(Math.floor(this.#shapeQueue.length * Math.random()), 1)[0],// random tetris shape
                 this.getRandom(Object.keys(Block.blocks)),//random color of block
                 //make sure all the blocks spone on the grid horizontaly
                 ( Math.floor( Math.random() * ( this.#width / Block.size - 4 ) ) + 2) * Block.size,
